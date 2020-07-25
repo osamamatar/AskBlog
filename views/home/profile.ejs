@@ -1,0 +1,176 @@
+<%- include ('../partials/header')%>
+
+    <div class="container ">
+        <!-- ===============================COVER=================================== -->
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <div class="jumbotron text-center" style="margin-bottom: 0;">
+                    <div class="inner cover">
+                        <img class="ui avatar image profileimg" src="../../image/pro2.png">
+                        <span>Osama</span>
+                        <p> hi i am osama and i am software engineer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <!-- ============================== question input================================== -->
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3 " id="right-menu">
+                <div class="ui vertical menu " id="side">
+                    <a class="teal item">
+                                Inbox
+                                <div class="ui red  left pointing label">1</div>
+                                </a>
+                    <a class="item">
+                                Followers
+                                <div class="ui label">51</div>
+                                </a>
+                    <a class="item active ">
+                               Likes
+                                <div class="ui  teal label">2000334</div>
+                                </a>
+
+                </div>
+                <br>
+            </div>
+
+            <div class="col-md-7">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="content">
+                            <span>Ask me</span>
+                        </div>
+
+                    </div>
+                    <div class="panel-body">
+                        <form class="ui reply form">
+                            <div class="field">
+                                <textarea rows="1" maxlength="300"></textarea>
+                            </div>
+                            <div class="ui red labeled submit icon button right floated">
+                                <i class="icon edit"></i> Add question
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <!-- ===========================================CONTENT================================ -->
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-7">
+                <!-- ================================CARD==================================== -->
+                <div class="panel panel-default ui card">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">
+                        <div class="content">
+                            <div class="right floated meta">14h</div>
+                            <img class="ui avatar image" src="../../image/pro.jpg" />
+                            <span id="nameTitle">osama</span>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <h4 class="que">how are you ?</h4>
+                        <hr />
+                        <p>
+                            Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id
+                            elit.
+                        </p>
+                        <hr />
+                        <div class="content">
+                            <span class="right floated">
+                                <i class="trash alternate icon"></i>
+                                <a href="#">delete</a> 
+                                </span>
+                            <span class="right floated">
+                            <i class="heart outline red like icon"></i>
+                            <a href="#">17 likes</a> 
+                            </span>
+
+
+                            <span class="right floated">
+                                    <i class="comment outline icon"></i>
+                                    <a onclick="document.getElementById('conmments').style.display = 'block'">3 comments</a>
+                                   
+                                </span>
+
+                        </div>
+                        <br />
+
+                        <!-- ====================================COMMENTS================================================= -->
+                        <div class="ui comments well">
+                            <h3 class="ui dividing header">Comments</h3>
+
+                            <div id="conmments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="../../image/pro.jpg" />
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Elliot Fu</a>
+                                        <div class="metadata">
+                                            <span class="date">Yesterday at 12:30AM</span>
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                This has been very useful for my research. Thanks as well!
+                                            </p>
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">Reply</a>
+                                        </div>
+                                    </div>
+                                    <div class="comments">
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img src="../../image/pro.jpg" />
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">Jenny Hess</a>
+                                                <div class="metadata">
+                                                    <span class="date">Just now</span>
+                                                </div>
+                                                <div class="text">
+                                                    Elliot you are always so right :)
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="reply">Reply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ui reply form">
+                                <div class="field">
+                                    <div class="ui icon input">
+                                        <input type="text" placeholder="add comment..." />
+                                        <a href="#" class="ui button secondary"><i class="reply icon"></i></a>
+
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <!-- ===============================END COMMENTS================================== -->
+                    </div>
+                </div>
+                <!-- =========================================END CARD================================================ -->
+            </div>
+
+
+
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+
+    <%- include ('../partials/footer')%>

@@ -1,0 +1,103 @@
+i.icon.question {
+    font-size: 3em;
+}
+
+.navbar-brand {
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#brand {
+    background: brown;
+}
+
+body {
+    padding-top: 60px;
+    background: #101010e6;
+}
+
+nav a {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.ui.card {
+    width: 100%;
+}
+
+.que {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.row {
+    padding-top: 10px;
+}
+
+#nameTitle {
+    font-weight: bold;
+}
+
+#right-menu li {
+    display: inline;
+}
+
+#side {
+    width: 100%;
+}
+
+div.content span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* ==========================cover=========================== */
+
+.jumbotron {
+    height: 20%;
+    background-image: url(https://www.photosforclass.com/download/px_126271);
+    opacity: 0.7;
+    border-style: solid;
+}
+
+img.ui.avatar.image.profileimg {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    border-style: solid;
+}
+
+div.inner span {
+    color: floralwhite;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+div.inner span:hover {
+    color: blue;
+}
+
+div.inner p {
+    color: floralwhite;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cover {
+    padding: 0 20px;
+}
+
+.inner {
+    padding: 30px;
+}
+
+#conmments {
+    display: none;
+}
+
+.glyphicon.glyphicon-cog {
+    color: brown;
+}
