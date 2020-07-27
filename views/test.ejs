@@ -1,99 +1,102 @@
-<div class="col-md-7">
-    <!-- ================================CARD==================================== -->
-    <div class="panel panel-default ui card">
-        <!-- Default panel contents -->
-        <div class="panel-heading">
-            <div class="content">
-                <div class="right floated meta">14h</div>
-                <img class="ui avatar image" src="/images/avatar/large/elliot.jpg " />
-                <span id="nameTitle">osama</span>
-            </div>
-        </div>
-        <div class="panel-body">
-            <h4 class="que">how are you ?</h4>
-            <hr />
-            <p>
-                Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id
-                elit.
-            </p>
-            <hr />
-            <div class="content">
-                <span class="right floated">
-                    <i class="trash alternate icon"></i>
-                    <a href="#">delete</a> 
-                    </span>
-                <span class="right floated">
-                <i class="heart outline red like icon"></i>
-                <a href="#">17 likes</a> 
-                </span>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>Ask</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+</head>
 
-                <span class="right floated">
-                        <i class="comment outline icon"></i>
-                        <a onclick="document.getElementById('conmments').style.display = 'block'">3 comments</a>
-                       
-                    </span>
+<body>
 
-            </div>
-            <br />
-
-            <!-- ====================================COMMENTS================================================= -->
-            <div class="ui comments well">
-                <h3 class="ui dividing header">Comments</h3>
-
-                <div id="conmments">
-                    <div class="comment">
-                        <a class="avatar">
-                            <img src="/images/avatar/small/elliot.jpg" />
-                        </a>
-                        <div class="content">
-                            <a class="author">Elliot Fu</a>
-                            <div class="metadata">
-                                <span class="date">Yesterday at 12:30AM</span>
-                            </div>
-                            <div class="text">
-                                <p>
-                                    This has been very useful for my research. Thanks as well!
-                                </p>
-                            </div>
-                            <div class="actions">
-                                <a class="reply">Reply</a>
-                            </div>
-                        </div>
-                        <div class="comments">
-                            <div class="comment">
-                                <a class="avatar">
-                                    <img src="/images/avatar/small/jenny.jpg" />
-                                </a>
-                                <div class="content">
-                                    <a class="author">Jenny Hess</a>
-                                    <div class="metadata">
-                                        <span class="date">Just now</span>
+    <div class="container">
+        <div class="row" id="landing-header">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">register </h3>
+                    </div>
+                    <form action="/register" method="POST" class="ui form">
+                        <!-- <div class="panel-body"> -->
+                        <div class="ui segment">
+                            <div class="ui two column very relaxed grid">
+                                <div class="column">
+                                    <div class="field">
+                                        <label class="pull-left">Username</label>
+                                        <div class="ui left icon input">
+                                            <input type="text" name="username" placeholder="Username">
+                                            <i class="user icon"></i>
+                                        </div>
                                     </div>
-                                    <div class="text">
-                                        Elliot you are always so right :)
+                                    <div class="field">
+                                        <label class="pull-left">E-mail</label>
+                                        <div class="ui left icon input">
+                                            <input type="text" name="email" placeholder="E-mail">
+                                            <i class="at icon"></i>
+                                        </div>
                                     </div>
-                                    <div class="actions">
-                                        <a class="reply">Reply</a>
+                                    <div class="field">
+                                        <label class="pull-left">name</label>
+                                        <div class="ui left icon input">
+                                            <input type="text" name="name" placeholder="name">
+                                            <i class="user icon"></i>
+                                        </div>
                                     </div>
+                                    <div class="field">
+                                        <label class="pull-left">password</label>
+                                        <div class="ui left icon input">
+                                            <input type="password" placeholder="password">
+                                            <i class="lock icon"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="column">
+                                    <div class="field">
+                                        <label for="birthday" class="pull-left">Birthday:</label>
+                                        <input type="date" id="birthday" name="birthday">
+                                    </div>
+                                    <div class="field">
+                                        <label class="pull-left">bio</label>
+                                        <textarea name="bio" id="" cols="30" rows="7" placeholder="type " maxlength="150"></textarea>
+                                        <!-- <div class="ui left icon input">
+                                                    <input type="text" placeholder="name">
+                                                    <i class="user icon"></i>
+                                                </div> -->
+                                    </div>
+
+
+                                    <div>
+                                        <button class="ui button secondary btn-block" type="submit" value="Login">submit</button>
+                                    </div>
+                                    <a href="/" class="ui facebook button btn-block" type="submit" value="Login">
+                                        <i class="facebook icon"></i> Facebook
+                                    </a>
+                                    <a href="/login"> login? </a>
                                 </div>
                             </div>
+                            <div class="ui vertical divider">
+                                and
+                            </div>
                         </div>
-                    </div>
+
+
+                        <!-- </div> -->
+                    </form>
                 </div>
-                <form class="ui reply form">
-                    <div class="field">
-                        <div class="ui icon input">
-                            <input type="text" placeholder="add comment..." />
-                            <a href="#" class="ui button secondary"><i class="reply icon"></i></a>
-
-                        </div>
-                    </div>
-
-                </form>
             </div>
-            <!-- ===============================END COMMENTS================================== -->
         </div>
     </div>
-    <!-- =========================================END CARD================================================ -->
-</div>
+
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <%- include('./partials/footer') %>
