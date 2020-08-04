@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ask</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="landing-header">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> complete registertion </h3>
+                    </div>
+                    <form action="/comRegis" method="POST" enctype="multipart/form-data" class="ui form">
+                        <div class="panel-body">
+                            <div class="ui segment">
+                                <div class="ui two column very relaxed grid">
+                                    <div class="column">
+                                        <div>
+                                            <label class="pull-left">avatar</label>
+                                            <!-- <div class="ui left icon input"> -->
+
+                                            <input type="file" name="avatar">
+
+                                            <!-- </div> -->
+                                        </div>
+
+                                        <div class="field">
+                                            <label class="pull-left">E-mail</label>
+                                            <div class="ui left icon input">
+                                                <input type="text" name="userinfo[email]" placeholder="E-mail">
+                                                <i class="at icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label class="pull-left">name</label>
+                                            <div class="ui left icon input">
+                                                <input type="text" name="userinfo[name]" placeholder="name">
+                                                <i class="user icon"></i>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="column">
+                                        <div class="field">
+                                            <label for="birthday" class="pull-left">Birthday:</label>
+                                            <input type="date" id="birthday" name="userinfo[birthday]">
+                                        </div>
+                                        <div class="field">
+                                            <label class="pull-left">bio</label>
+                                            <textarea name="userinfo[bio]" id="" cols="30" rows="6" placeholder="type " maxlength="150"></textarea>
+
+                                        </div>
+
+
+                                        <div>
+                                            <button class="ui button secondary btn-block" type="submit" value="Login">submit</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="ui vertical divider">
+                                    and
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>

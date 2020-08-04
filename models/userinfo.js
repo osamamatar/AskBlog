@@ -10,7 +10,7 @@ var mongoose = require('mongoose'),
         name: String,
         email: String,
         bio: String,
-        image: String,
+        avatar: { data: Buffer, contentType: String },
     })
 
 module.exports = mongoose.model('Userinfo', UserinfoSchema)
