@@ -15,7 +15,7 @@ router.get('/login', (req, res) => {
 router.post(
     '/login',
     passport.authenticate('local', {
-        successRedirect: '/profile',
+        successRedirect: '/home',
         failureRedirect: '/login',
     }),
     function(req, res) {},
@@ -37,14 +37,18 @@ router.get('/register', (req, res) => {
 
 router.post('/register', function(req, res) {
     User.register(
-        new User({ username: req.body.username }),
+        new User({
+            username: req.body.username,
+        }),
         req.body.password,
         function(err, user) {
             if (err) {
+                console.log(err)
                 return res.render('register')
             }
+
             passport.authenticate('local')(req, res, function() {
-                res.redirect('/comRegis')
+                res.redirect('/comRegis/' + user._id)
             })
         },
     )

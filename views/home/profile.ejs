@@ -8,7 +8,7 @@
             <div class="col-md-10">
                 <div class="jumbotron text-center" style="margin-bottom: 0;">
                     <div class="inner cover">
-                        <img class="ui avatar image profileimg" src="../../image/pro2.png">
+                        <img class="ui avatar image profileimg" src="../../image/images.png">
                         <span>Osama</span>
                         <p> hi i am osama and i am software engineer</p>
                     </div>
@@ -47,13 +47,15 @@
 
                     </div>
                     <div class="panel-body">
-                        <form class="ui reply form">
-                            <div class="field">
-                                <textarea rows="1" maxlength="300"></textarea>
+                        <form class="ui reply form" action="/questions/<%= user._id %>/new" method="POST">
+                            <div class="field form-group">
+                                <textarea class="form-control" rows="1" maxlength="300" name="questiontext"></textarea>
                             </div>
-                            <div class="ui red labeled submit icon button right floated">
-                                <i class="icon edit"></i> Add question
-                            </div>
+
+                            <input type="submit" value=" add question" class="ui red  submit icon button right floated form-group">
+
+
+
                         </form>
                     </div>
                 </div>
@@ -98,7 +100,7 @@
 
                             <span class="right floated">
                                     <i class="comment outline icon"></i>
-                                    <a onclick="document.getElementById('conmments').style.display = 'block'">3 comments</a>
+                                    <a onclick="document.getElementById('comments').style.display = 'block'">3 comments</a>
                                    
                                 </span>
 
@@ -109,7 +111,7 @@
                         <div class="ui comments well">
                             <h3 class="ui dividing header">Comments</h3>
 
-                            <div id="conmments">
+                            <div id="comments">
                                 <div class="comment">
                                     <a class="avatar">
                                         <img src="../../image/pro.jpg" />

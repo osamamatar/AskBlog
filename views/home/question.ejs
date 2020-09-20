@@ -1,0 +1,100 @@
+<%- include ('../partials/header')%>
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-md-7">
+            <div class="row">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a data-toggle="tab" href="#Questions">Questions</a></li>
+                    <li><a data-toggle="tab" href="#Answers">Answers</a></li>
+                    <li><a data-toggle="tab" href="#Likes">Likes</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="tab-content">
+                    <div id="Questions" class="tab-pane fade in active">
+
+                        <div class="panel panel-default ui card">
+                            <div class="panel-body ">
+                                <h3>Questions</h3>
+                                <hr>
+
+                                <div class="ui list">
+                                    <% questions.forEach((que)=>{%>
+                                        <a class="item">
+                                            <i class="question circle icon"></i>
+
+                                            <div class="content">
+                                                <!-- <div class="header">osama</div> -->
+                                                <div class="description">
+                                                    <%= que.text %>
+                                                        <div class="text-right">
+
+                                                            <form id="delete-form">
+
+                                                                <i class=" btn trash icon"></i>
+                                                            </form>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <%}) %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Answers" class="tab-pane fade">
+                        <div class="panel panel-default ui card">
+                            <div class="panel-body ">
+                                <h3>Answers</h3>
+                                <hr>
+                                <div class="ui list">
+                                    <a class="item">
+                                        <i class="help icon"></i>
+                                        <div class="content">
+                                            <div class="header">Floated Icon</div>
+                                            <div class="description">This text will always have a left margin to make sure it sits alongside your icon</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div id="Likes" class="tab-pane fade">
+                        <div class="panel panel-default ui card">
+                            <div class="panel-body ">
+                                <h3>Likes</h3>
+                                <hr>
+                                <div class="ui list">
+                                    <div class="item">
+                                        <img class="ui avatar image" src="../../image/pro.jpg">
+                                        <span>Username</span>
+                                        <a>
+                                            <div class="content">
+
+                                                <div class="description">This text will always have a left margin to make sure it sits alongside your icon</div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-md-2"></div>
+
+
+
+
+    </div>
+
+    <%- include ('../partials/footer')%>

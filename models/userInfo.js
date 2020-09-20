@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    UserinfoSchema = new mongoose.Schema({
+    userInfoSchema = mongoose.Schema({
         author: {
             id: {
                 type: mongoose.Schema.Types.ObjectId,
@@ -10,7 +10,12 @@ var mongoose = require('mongoose'),
         name: String,
         email: String,
         bio: String,
-        avatar: { data: Buffer, contentType: String },
+        avatar: String,
+        Birthday: Date,
+
+        friends: [{ type: mongoose.SchemaTypes.ObjectId, ref: 'user' }],
     })
 
-module.exports = mongoose.model('Userinfo', UserinfoSchema)
+var userInfoModel = new mongoose.model('userInfo', userInfoSchema)
+
+module.exports = userInfoModel

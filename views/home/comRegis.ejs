@@ -18,57 +18,58 @@
                     <div class="panel-heading">
                         <h3 class="panel-title"> complete registertion </h3>
                     </div>
-                    <form action="/comRegis" method="POST" enctype="multipart/form-data" class="ui form">
-                        <div class="panel-body">
-                            <div class="ui segment">
-                                <div class="ui two column very relaxed grid">
-                                    <div class="column">
-                                        <div>
-                                            <label class="pull-left">avatar</label>
-                                            <!-- <div class="ui left icon input"> -->
+                    <form action="/comRegis/<%=currentUser._id %>" method=" POST " enctype="multipart/form-data " class="ui form ">
+                        <div class="panel-body ">
+                            <div class="ui segment ">
+                                <div class="ui two column very relaxed grid ">
+                                    <div class="column ">
+                                        <div class="field ">
+                                            <label class="pull-left ">avatar</label>
+                                            <div class="ui input ">
 
-                                            <input type="file" name="avatar">
+                                                <input type="text " name="avatar">
 
-                                            <!-- </div> -->
-                                        </div>
-
-                                        <div class="field">
-                                            <label class="pull-left">E-mail</label>
-                                            <div class="ui left icon input">
-                                                <input type="text" name="userinfo[email]" placeholder="E-mail">
-                                                <i class="at icon"></i>
                                             </div>
                                         </div>
-                                        <div class="field">
-                                            <label class="pull-left">name</label>
-                                            <div class="ui left icon input">
-                                                <input type="text" name="userinfo[name]" placeholder="name">
-                                                <i class="user icon"></i>
+
+                                        <div class="field ">
+                                            <label class="pull-left ">E-mail</label>
+                                            <div class="ui left icon input ">
+                                                <input type="text " name="email" placeholder="E-mail ">
+                                                <i class="at icon "></i>
+                                            </div>
+                                        </div>
+                                        <div class="field ">
+                                            <label class="pull-left ">name</label>
+                                            <div class="ui left icon input ">
+                                                <input type="text " name="name" placeholder="name ">
+                                                <i class="user icon "></i>
                                             </div>
                                         </div>
 
 
                                     </div>
 
-                                    <div class="column">
-                                        <div class="field">
-                                            <label for="birthday" class="pull-left">Birthday:</label>
-                                            <input type="date" id="birthday" name="userinfo[birthday]">
+                                    <div class="column ">
+                                        <div class="field ">
+                                            <label for="birthday " class="pull-left ">Birthday:</label>
+                                            <input type="date" id="birthday " name="birthday">
                                         </div>
-                                        <div class="field">
-                                            <label class="pull-left">bio</label>
-                                            <textarea name="userinfo[bio]" id="" cols="30" rows="6" placeholder="type " maxlength="150"></textarea>
+                                        <div class="field ">
+                                            <label class="pull-left ">bio</label>
+                                            <textarea name="bio" cols="30 " rows="6 " placeholder="type " maxlength="150 "></textarea>
 
                                         </div>
 
 
                                         <div>
-                                            <button class="ui button secondary btn-block" type="submit" value="Login">submit</button>
+                                            <input type="submit" value="submit">
+
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="ui vertical divider">
+                                <div class="ui vertical divider ">
                                     and
                                 </div>
                             </div>
@@ -81,7 +82,7 @@
         </div>
     </div>
 
-    <ul class="slideshow">
+    <ul class="slideshow ">
         <li></li>
         <li></li>
         <li></li>

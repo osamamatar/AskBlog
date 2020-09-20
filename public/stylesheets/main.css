@@ -14,7 +14,7 @@ i.icon.question {
 
 body {
     padding-top: 60px;
-    background: #101010e6;
+    background: #ebe6e6;
 }
 
 nav a {
@@ -50,6 +50,17 @@ nav a {
 div.content span {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+div.row ul li a {
+    border-radius: 20px;
+    border: #3379b7 solid 1px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+div.row ul li a:active {
+    background: black;
 }
 
 
@@ -94,7 +105,11 @@ div.inner p {
     padding: 30px;
 }
 
-#conmments {
+#comments {
+    display: none;
+}
+
+#commentsStream {
     display: none;
 }
 

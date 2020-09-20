@@ -11,15 +11,20 @@ mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true)
 mongoose.set('useUnifiedTopology', true)
 var commentRoutes = require('./routes/comments'),
-    answerRoutes = require('./routes/answers'),
+    pagesRoutes = require('./routes/pages'),
     authRoutes = require('./routes/index'),
-    comRegisRoutes = require('./routes/comRegis')
+    comRegisRoutes = require('./routes/comRegis'),
+    questionRoutes = require('./routes/question'),
+    seed = require('./seed/questionseed')
 User = require('./models/user')
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'))
+
 mongoose.connect('mongodb://localhost/ask_blog')
+
+//====================================
 
 //======================
 //PASSPORT CONFIGRATION
@@ -40,9 +45,22 @@ passport.deserializeUser(User.deserializeUser())
 
 //=======================
 
+//middalware for passing currentUser for every template to using it in header
+
+//============================================================================
+
+//seed()
+
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user
+
+    next()
+})
+
 app.use(commentRoutes)
-app.use(answerRoutes)
+app.use(pagesRoutes)
 app.use(authRoutes)
 app.use(comRegisRoutes)
+app.use(questionRoutes)
 
 app.listen(port, () => console.log(`server runing ....!`))
